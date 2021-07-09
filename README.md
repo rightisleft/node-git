@@ -1,7 +1,10 @@
 # node-git
-An alpine based node image with git preinstalled to support installing from git repositories
+A `node:16-alpine:latest` image with git preinstalled to support installing from git repositories
 
-# problem solved
+## On Docker Hub
+[https://hub.docker.com/repository/docker/rightisleft/node-git]()
+
+## Problem Solved
 The default node alpine docker images do not contain git binaries. This breaks git based support.
 
 ```
@@ -13,12 +16,15 @@ npm ERR! sh: git: not found
 npm ERR! A complete log of this run can be found in:
 npm ERR!     /root/.npm/_logs/2021-07-09T16_45_55_614Z-debug.log
 ```
-# package.json and git?
+## package.json and git?
+
 Yes! You can host your own node modules using a public git repo instead of npmjs.org. This can help simplify your CI/CD workflow.
-# Installing the npm packages from git
+## Installing the npm packages from git
 
 * Navigate to the npm package GitHub repository.
+
 * Copy the https URL available on the browser tab and run the npm install command like this.
+
 * npm install https://github.com/rightisleft/axios
 This installs the forked axios package from the GitHub repository and it adds the following dependency to your package.json file.
 
