@@ -46,7 +46,7 @@ npm install https://github.com/rightisleft/axios#3f8b128
 
 ## NPM Prepare: Avoid Complicated Build Systems
 
-For projects like typescript, you can use the `prepare` script to execute a build stop. This will be run AFTER npm downloads your rep enabling you to compile libraries on your local machine. This is great for development, i would not recomend this for production.
+For projects like typescript, you can use the `prepare` script to execute a build stop. This will be run AFTER npm downloads your repo enabling you to compile libraries on your local machine. This is great for development, i would not recomend this for production.
 
 ```
   "scripts": {
