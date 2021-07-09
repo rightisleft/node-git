@@ -43,3 +43,21 @@ npm install https://github.com/rightisleft/axios#v0.15.1
 ```
 npm install https://github.com/rightisleft/axios#3f8b128
 ```
+
+## NPM Prepare: Avoid Complicated Build Systems
+
+For projects like typescript, you can use the `prepare` script to execute a build stop. This will be run AFTER npm downloads your rep enabling you to compile libraries on your local machine. This is great for development, i would not recomend this for production.
+
+```
+  "scripts": {
+    "dist": "tsc",
+    "test": "mocha -r ts-node/register ./test/**/*",
+    "prepack": "tsc",
+  }
+```
+
+Docs: [https://docs.npmjs.com/cli/v6/using-npm/scripts](https://docs.npmjs.com/cli/v6/using-npm/scripts)
+
+### Warning
+
+It looks like there was an error with how older versions npm handled 'devDependencies' and git repos. If your 'typescript' library was declared there it would not get installed a 'prepack' would fail. I suggest using npm 7.18.1 or newer. 
