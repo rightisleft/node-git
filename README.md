@@ -2,7 +2,7 @@
 A `node:16-alpine:latest` image with git preinstalled to support installing from git repositories
 
 ## On Docker Hub
-[https://hub.docker.com/repository/docker/rightisleft/node-git]()
+[https://hub.docker.com/repository/docker/rightisleft/node-git](https://hub.docker.com/repository/docker/rightisleft/node-git)
 
 ## Problem Solved
 The default node alpine docker images do not contain git binaries. This breaks git based support.
@@ -34,12 +34,12 @@ This installs the forked axios package from the GitHub repository and it adds th
 
 You can set the version of an npm package from the GitHub repository from git tag or commit hash
 
-### Git Tag
+*Git Tag*
 ```
 npm install https://github.com/rightisleft/axios#v0.15.1
 ```
 
- ### Git Hash
+ *Git Hash*
 ```
 npm install https://github.com/rightisleft/axios#3f8b128
 ```
